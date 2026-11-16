@@ -96,9 +96,16 @@ main { flex: 1; }
   font-weight: 600; padding: 11px 20px; border-radius: 999px; font-size: var(--step-0);
 }
 .door .addr { font-size: var(--step--1); color: var(--muted); }
+.band { border-top: 1px solid var(--line); }
+.elsewhere { display: grid; gap: 32px 24px; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 48px 56px; }
+.elsewhere .col { display: grid; gap: 10px; align-content: start; }
+.elsewhere p { color: var(--muted); }
+.links { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 8px; }
+.links a { font-weight: 600; }
 @media (max-width: 720px) {
   .doors .wrap { grid-template-columns: 1fr; }
   .intro .wrap { padding-block: 40px 28px; }
+  .elsewhere { grid-template-columns: 1fr; padding-block: 36px 44px; }
 }
 @media (prefers-reduced-motion: reduce) { .door { transition: none; } .door:hover { transform: none; } }
 
@@ -142,6 +149,28 @@ main { flex: 1; }
         <span class="go">Read the research</span>
         <span class="addr">research.sideofmydesk.com</span>
       </a>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="elsewhere-title">
+    <div class="wrap elsewhere">
+      <div class="col">
+        <h2 id="elsewhere-title">AI at the Edge</h2>
+        <p>My show about working with AI coding tools, as video and as a podcast.</p>
+        <ul class="links">
+          <li><a href="https://www.youtube.com/@aiattheedge">Watch on YouTube</a></li>
+          <li><a href="https://podcasts.apple.com/us/podcast/ai-at-the-edge/id6828177002">Listen on Apple Podcasts</a></li>
+          <li><a href="https://open.spotify.com/show/3SFs5grFs0tdHqyhz9qgxi">Listen on Spotify</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Get in touch</h2>
+        <p>I read and answer my own email.</p>
+        <ul class="links">
+          <li><a href="mailto:ian@sideofmydesk.com">ian@sideofmydesk.com</a></li>
+          <li><a href="https://www.linkedin.com/in/ianmichel">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </section>
 </main>
